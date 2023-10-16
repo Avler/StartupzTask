@@ -7,9 +7,10 @@ type CustomButtonProps = {
   width?: string | number;
   textColor?: string;
   children: React.ReactNode;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 };
 
-const CustomButton: React.FC<CustomButtonProps> = ({ bgColor, borderColor, width, textColor, children }) => (
+const CustomButton: React.FC<CustomButtonProps> = ({ bgColor, borderColor, width, textColor, children, type }) => (
   <button
     className="custom-btn"
     style={{
@@ -18,6 +19,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ bgColor, borderColor, width
       width: width,
       color: textColor,
     }}
+    type={type}
   >
     {children}
   </button>

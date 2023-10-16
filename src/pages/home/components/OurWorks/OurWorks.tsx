@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import styled from 'styled-components';
 import SectionCard from '../../../../common/components/SectionCard/SectionCard';
 import card1img from '../../../../assets/card1.webp';
 import card2img from '../../../../assets/card2.webp';
@@ -8,8 +9,6 @@ import card4img from '../../../../assets/card4.webp';
 import thumb from '../../../../assets/thumb.webp';
 import thumbRight from '../../../../assets/thumbRight.webp';
 import '../../../../common/style/commonStyle.scss';
-
-import styled from 'styled-components';
 
 const OurWorks = () => {
   return (

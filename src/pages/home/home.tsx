@@ -5,6 +5,7 @@ import AssistanSection from './components/AssistantSection/AssistanSection';
 import bulb from '../../assets/bulb.svg';
 import OurWorks from './components/OurWorks/OurWorks';
 import WeAreHiring from './components/WeAreHiring/WeAreHiring';
+import Contact from './components/Contact/Contact';
 
 const home = () => {
   return (
@@ -37,6 +38,7 @@ const home = () => {
       />
       <OurWorks />
       <WeAreHiring />
+      <Contact />
     </>
   );
 };
