@@ -1,0 +1,12 @@
+.custom-btn {
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 32.5px;
+  background: #46b8c8;
+  border: 1px solid transparent;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
