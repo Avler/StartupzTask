@@ -24,13 +24,12 @@ const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick, onStartup
               <Dropdown.Toggle as={FiMenuWrapper} id="dropdown-menu-toggle">
                 <FiMenu size={32} />
               </Dropdown.Toggle>
-
-              <Dropdown.Menu>
+              <DropdownStyledMenu>
                 <Dropdown.Item onClick={onStartupsClick}>Startups</Dropdown.Item>
                 <Dropdown.Item onClick={onContactClick}>Contact</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={onWeAreHiringClick}>Work with us!</Dropdown.Item>
-              </Dropdown.Menu>
+              </DropdownStyledMenu>
             </Dropdown>
 
             <StyledList className="d-none d-md-flex">
@@ -84,6 +83,10 @@ const StyledListItem = styled.li`
   color: #3d4f5c;
   font-size: 18px;
   cursor: pointer;
+  text-underline-offset: 5px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 const FiMenuWrapper = styled.div`
   cursor: pointer;
@@ -96,4 +99,26 @@ const ImageColumn = styled(Col)`
 const PageWrapper = styled.div`
   max-width: 1440px;
   margin: auto;
+`;
+const DropdownStyledMenu = styled(Dropdown.Menu)`
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 15px 0;
+  margin-top: 10px;
+  .dropdown-item {
+    padding: 12px 20px;
+    color: #3d4f5c;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    &:hover {
+      background-color: #f2f2f2;
+      color: #46b8c8;
+    }
+  }
+
+  .dropdown-divider {
+    margin: 10px 0;
+    border-top-color: #e7e7e7;
+  }
 `;
