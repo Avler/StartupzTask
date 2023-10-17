@@ -31,9 +31,10 @@ export default HeroSection;
 
 const ContainerBox = styled(Container)`
   min-height: 640px;
-  padding-top: 150px;
+  padding-top: 120px;
   padding-bottom: 30px;
   padding-left: 120px;
+  position: relative;
   @media (max-width: 1200px) {
     padding-left: 0px;
     padding-top: 80px;
@@ -61,6 +62,7 @@ const StyledImageBox = styled(Col)`
   z-index: 0;
   position: absolute;
   right: 0;
+  bottom: 0;
   max-width: 705px;
 
   @media (max-width: 1200px) {

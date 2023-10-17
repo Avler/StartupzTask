@@ -44,7 +44,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ title, descript
 
 const ContainerBox = styled(Container)`
   background: #fbfafa;
-  padding: 140px 0px;
+  padding: 130px 0px;
 `;
 
 const StyledContTitle = styled(Col)`
@@ -85,6 +85,8 @@ const StyledRow = styled(Row)`
   flex-direction: column;
   @media (min-width: 1200px) {
     flex-direction: row;
+
+    max-width: 1200px;
   }
 `;
 const StyledItemDescriptionCont = styled.div`
@@ -100,5 +102,8 @@ const StyledItemDescriptionCont = styled.div`
 const PageWrapper = styled.div`
   max-width: 1440px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
 `;
 export default DescriptionSection;

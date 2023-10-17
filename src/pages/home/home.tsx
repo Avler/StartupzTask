@@ -43,11 +43,15 @@ const home = () => {
         items={[
           {
             title: '01. Innovation',
-            divider: '___',
+            divider: '______',
             description:
               'Startupz operates where entrepreneurship and technology intersect. We design solutions and turn them into businesses models.',
           },
-          { title: '02. People', divider: '___', description: 'Talent is what enable us to create great companies.' },
+          {
+            title: '02. People',
+            divider: '______',
+            description: 'Talent is what enable us to create great companies.',
+          },
         ]}
       />
       <div ref={ourWorksRef}>
