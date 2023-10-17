@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Dropdown, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import CustomButton from '../../common/components/CustomButton/CustomButton';
 import { FiMenu } from 'react-icons/fi';
 import logo from '../../assets/logo.svg';
 import styled from 'styled-components';
-
-const Navbar = () => {
+type Props = {
+  onContactClick: () => void;
+  onWeAreHiringClick: () => void;
+};
+const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
@@ -24,16 +28,22 @@ const Navbar = () => {
 
               <Dropdown.Menu>
                 <Dropdown.Item href="#/startups">Startups</Dropdown.Item>
-                <Dropdown.Item href="#/contact">Contact</Dropdown.Item>
+                <Dropdown.Item onClick={onContactClick}>Contact</Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item href="#/work-with-us">Work with us!</Dropdown.Item>
+                <Dropdown.Item onClick={onWeAreHiringClick}>Work with us!</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
 
             <StyledList className="d-none d-md-flex">
               <StyledListItem>Startups</StyledListItem>
-              <StyledListItem>Contact</StyledListItem>
-              <CustomButton bgColor="#fff" borderColor="#46B8C8" width={185} textColor="#46B8C8">
+              <StyledListItem onClick={onContactClick}>Contact</StyledListItem>{' '}
+              <CustomButton
+                bgColor="#fff"
+                borderColor="#46B8C8"
+                width={185}
+                textColor="#46B8C8"
+                onClick={onWeAreHiringClick}
+              >
                 Work with us!
               </CustomButton>
             </StyledList>
@@ -66,6 +76,7 @@ const StyledList = styled.ul`
   list-style: none;
   gap: 40px;
   margin: 0px;
+  font-weight: 500;
 `;
 const StyledListItem = styled.li`
   color: #3d4f5c;

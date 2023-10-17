@@ -3,14 +3,27 @@ import DescriptionSection from '../../components/DescriptionSection/DescriptionS
 import question from '../../assets/question.svg';
 import AssistanSection from './components/AssistantSection/AssistanSection';
 import bulb from '../../assets/bulb.svg';
-import OurWorks from './components/OurWorks/OurWorks';
 import WeAreHiring from './components/WeAreHiring/WeAreHiring';
 import Contact from './components/Contact/Contact';
+import OurWorks from './components/OurWorks/OurWorks';
+
+import React, { useRef } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const home = () => {
+  const ourWorksRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+  const weAreHiringRef = useRef<HTMLDivElement | null>(null);
+  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <>
-      <HeroSection />
+      <Navbar onContactClick={() => scrollToRef(contactRef)} onWeAreHiringClick={() => scrollToRef(weAreHiringRef)} />
+      <HeroSection onSeeOurWorksClick={() => scrollToRef(ourWorksRef)} />
       <DescriptionSection
         title="Who we are"
         description="We create products that have innovation and technology at their core. We value working with talented people that understand the possibilities of today."
@@ -36,9 +49,16 @@ const home = () => {
           { title: '02. People', divider: '___', description: 'Talent is what enable us to create great companies.' },
         ]}
       />
-      <OurWorks />
-      <WeAreHiring />
-      <Contact />
+      <div ref={ourWorksRef}>
+        <OurWorks />
+      </div>
+      <div ref={weAreHiringRef}>
+        <WeAreHiring />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
+      <Footer />
     </>
   );
 };

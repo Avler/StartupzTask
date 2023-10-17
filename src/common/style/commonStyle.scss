@@ -61,3 +61,42 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Footer */
+
+.gray-text {
+  color: #939393;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+}
+.link-title {
+  color: #3d4f5c;
+  font-size: 22px;
+
+  font-weight: 400;
+  line-height: 18px;
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+}
+
+.list-item {
+  color: #46b8c8;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+}
+.logos {
+  width: 23px;
+}
+.col-sizer {
+  width: 150px;
+}

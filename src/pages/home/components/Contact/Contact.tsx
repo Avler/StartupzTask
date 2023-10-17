@@ -28,11 +28,21 @@ const StyledContainer = styled(Container)`
   background: #ffc351;
   position: relative;
   padding-left: 124px;
+  @media (max-width: 800px) {
+    padding: 0;
+  }
 `;
 
 const PageWrapper = styled.div`
   padding: 140px 0px;
   max-width: 1440px;
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 400px) {
+    text-align: center;
+  }
 `;
 
 const StyledImage = styled(Image)`
@@ -52,6 +62,9 @@ const StyledTitle = styled.h2`
   font-weight: 700;
   line-height: 55px; /* 91.667% */
   letter-spacing: -1.2px;
+  @media (max-width: 800px) {
+    font-size: 30px;
+  }
 `;
 const StyledText = styled.p`
   color: #fff;
@@ -61,4 +74,7 @@ const StyledText = styled.p`
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.24px;
+  @media (max-width: 400px) {
+    text-align: center;
+  }
 `;

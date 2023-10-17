@@ -86,13 +86,15 @@ const StyledTextAreaCont = styled.div`
 `;
 const StyledFormWrapper = styled.div`
   width: 512px;
-
+  z-index: 1;
   flex-shrink: 0;
   border-radius: 10px;
   background: #f3f3f3;
   box-shadow: 0px 8px 35px 0px rgba(187, 169, 142, 0.15);
   padding: 20px;
-
+  @media (max-width: 550px) {
+    width: 350px;
+  }
   form {
     margin-top: 50px;
     margin-bottom: 30px;
@@ -111,6 +113,9 @@ const StyledInput = styled(BSForm.Control)`
   box-shadow: 0px 8px 35px 0px rgba(187, 169, 142, 0.15);
 
   width: 429px;
+  @media (max-width: 550px) {
+    width: 300px;
+  }
 `;
 const StyledTextArea = styled(BSForm.Control)`
   width: 429px;
@@ -120,6 +125,9 @@ const StyledTextArea = styled(BSForm.Control)`
   box-shadow: 0px 8px 35px 0px rgba(187, 169, 142, 0.15);
   border: none;
   padding: 20px;
+  @media (max-width: 550px) {
+    width: 300px;
+  }
 `;
 
 export default ContactForm;

@@ -3,7 +3,10 @@ import CustomButton from '../../../../common/components/CustomButton/CustomButto
 import styled from 'styled-components';
 import '../../../../common/style/commonStyle.scss';
 import HeroImg from '../../../../assets/heroImg.webp';
-const HeroSection = () => {
+type Props = {
+  onSeeOurWorksClick: () => void;
+};
+const HeroSection = ({ onSeeOurWorksClick }: Props) => {
   return (
     <PageWrapper>
       <ContainerBox fluid>
@@ -11,7 +14,7 @@ const HeroSection = () => {
           <TextColumn>
             <StyledTitle>We Create Startups.</StyledTitle>
             <p className="text-orange">We are startup studio that develops and launches new companies.</p>
-            <CustomButton bgColor="#46B8C8" width={157} textColor="#fff">
+            <CustomButton bgColor="#46B8C8" width={157} textColor="#fff" onClick={onSeeOurWorksClick}>
               See our works
             </CustomButton>
           </TextColumn>
