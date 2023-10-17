@@ -46,7 +46,7 @@ const AssistanSection = () => {
             <Image src={ThumbIconRight} alt="Thumb Icon" />
           </StyledCol>
         </StyledRow>
-        <Row>
+        <StyledRow>
           <AssistantBox xs="auto">
             {isMessageVisible && (
               <StyledContMessage>
@@ -64,7 +64,7 @@ const AssistanSection = () => {
               />
             </div>
           </AssistantBox>
-        </Row>
+        </StyledRow>
       </Container>
     </PageWrapper>
   );
