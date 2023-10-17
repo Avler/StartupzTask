@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import AssistantImage from '../../../../assets/assistent.webp';
 import ThumbIcon from '../../../../assets/thumb.webp';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { Form as BSForm, Button } from 'react-bootstrap';
+import { Form as BSForm } from 'react-bootstrap';
 import styled from 'styled-components';
 import * as yup from 'yup';
 import CustomButton from '../../common/components/CustomButton/CustomButton';
@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
       <Form
         onSubmit={onSubmit}
         validate={validate}
-        render={({ handleSubmit, pristine, invalid }) => (
+        render={({ handleSubmit }) => (
           <BSForm onSubmit={handleSubmit}>
             <Field name="name">
               {({ input, meta }) => (

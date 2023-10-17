@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import '../../common/style/commonStyle.scss';

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Dropdown, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
 import CustomButton from '../../common/components/CustomButton/CustomButton';
 import { FiMenu } from 'react-icons/fi';
 import logo from '../../assets/logo.svg';
