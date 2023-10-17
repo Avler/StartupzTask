@@ -1,11 +1,24 @@
+.orange-bold {
+  color: #fb8958;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; // 125%
+  letter-spacing: -0.24px;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+    padding: 0px 20px;
+  }
+}
 .text-orange {
   color: #fb8958;
-  font-family: 'Circular Std', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px; // 125%
   letter-spacing: -0.24px;
+
   @media (max-width: 1200px) {
     text-align: center;
     padding: 0px 20px;
@@ -29,6 +42,7 @@
   line-height: 30px; // 125%
   letter-spacing: -0.24px;
   margin: 0px;
+  font-weight: 500;
   @media (min-width: 1200px) {
     width: 100%;
     padding-left: 80px;
@@ -47,6 +61,7 @@
   width: 300px;
   width: 100%;
   padding-left: 80px;
+  font-weight: 500;
   @media (max-width: 1200px) {
     font-size: 24px;
     padding: 0px 70px;
@@ -60,6 +75,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 5px 5px 0px rgba(187, 169, 142, 0.55);
+  background: #f5f5f5;
+  padding: 20px;
 }
 
 /* Footer */

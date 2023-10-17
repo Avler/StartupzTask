@@ -1,5 +1,5 @@
 import HeroSection from './components/HeroSection/HeroSection';
-import DescriptionSection from '../../components/DescriptionSection/DescriptionSection';
+import DescriptionSection from '../../common/components/DescriptionSection/DescriptionSection';
 import question from '../../assets/question.svg';
 import AssistanSection from './components/AssistantSection/AssistanSection';
 import bulb from '../../assets/bulb.svg';
@@ -29,9 +29,9 @@ const home = () => {
         description="We create products that have innovation and technology at their core. We value working with talented people that understand the possibilities of today."
         imageUrl={question}
         items={[
-          { title: '01', divider: '___', description: 'We develop innovative products, systems, and services' },
-          { title: '02', divider: '___', description: 'Next we build teams to scale them into companies' },
-          { title: '03', divider: '___', description: 'Each startup solving one problem at a time' },
+          { title: '01', divider: '_____', description: 'We develop innovative products, systems, and services' },
+          { title: '02', divider: '_____', description: 'Next we build teams to scale them into companies' },
+          { title: '03', divider: '_____', description: 'Each startup solving one problem at a time' },
         ]}
       />
       <AssistanSection />

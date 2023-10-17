@@ -56,11 +56,14 @@ export default Navbar;
 
 const NavCont = styled(Row)`
   justify-content: space-between;
+  padding: 30px 110px;
 
-  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 900px) {
+    padding: 30px 30px;
+  }
 `;
 const MenuCont = styled(Col)`
   display: flex;

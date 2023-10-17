@@ -5,13 +5,14 @@ import styled from 'styled-components';
 import * as yup from 'yup';
 import CustomButton from '../../common/components/CustomButton/CustomButton';
 
-// Define form fields type
 interface FormFields {
   name: string;
   email: string;
   message: string;
 }
-
+interface Props {
+  onSuccessfulSubmit: () => void;
+}
 // Define the validation schema using yup
 const schema: yup.ObjectSchema<FormFields> = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -19,9 +20,10 @@ const schema: yup.ObjectSchema<FormFields> = yup.object().shape({
   message: yup.string().required('Message is required'),
 });
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC<Props> = ({ onSuccessfulSubmit }) => {
   const onSubmit = (values: FormFields) => {
     console.log(values);
+    onSuccessfulSubmit();
   };
 
   const validate = (values: FormFields) => {

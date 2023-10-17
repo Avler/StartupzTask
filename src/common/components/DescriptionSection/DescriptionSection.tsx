@@ -1,6 +1,6 @@
 import { Col, Container, Row, Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import '../../common/style/commonStyle.scss';
+import '../../../common/style/commonStyle.scss'
 
 type Item = {
   title: string;
@@ -89,11 +89,12 @@ const StyledRow = styled(Row)`
 `;
 const StyledItemDescriptionCont = styled.p`
   width: 600px;
+  
   @media (max-width: 578px) {
     width: 300px;
   }
   @media (min-width: 1200px) {
-    width: 750px;
+    width: 850px;
   }
 `;
 const PageWrapper = styled.div`

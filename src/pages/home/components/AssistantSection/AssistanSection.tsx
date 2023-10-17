@@ -1,28 +1,52 @@
-import { useState } from 'react';
+import { useState , useEffect , useRef } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import AssistantImage from '../../../../assets/assistent.webp';
 import ThumbIcon from '../../../../assets/thumb.webp';
 import ThumbIconRight from '../../../../assets/thumbRight.webp';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import '../../../../common/style/commonStyle.scss';
 
 const AssistanSection = () => {
   const [isMessageVisible, setMessageVisible] = useState(false);
+
+  const sectionRef = useRef(null);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        setMessageVisible(true);
+      }
+    },
+    { threshold: 0.1 } // 10% visibility triggers the callback
+  );
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => {
+    if (sectionRef.current) {
+      observer.unobserve(sectionRef.current);
+    }
+  };
+}, []);
+
   return (
-    <PageWrapper>
+    <PageWrapper ref={sectionRef}>
       <Container>
         <StyledRow>
           <StyledCol xs="auto">
             <Image src={ThumbIcon} alt="Thumb Icon" />
           </StyledCol>
           <StyledCol xs="auto">
-            <h2 className="text-orange">We love solving problems!</h2>
+            <h2 className="orange-bold">We love solving problems!</h2>
           </StyledCol>
           <StyledCol xs="auto">
             <Image src={ThumbIconRight} alt="Thumb Icon" />
           </StyledCol>
         </StyledRow>
-        <Row className=" justify-content-center  ">
+        <Row >
           <AssistantBox xs="auto">
             {isMessageVisible && (
               <StyledContMessage>
@@ -66,11 +90,20 @@ const AssistantBox = styled(Col)`
   top: 120px;
   height: 250px;
   right: 100px;
+  
   @media (max-width: 1200px) {
     position: static;
     flex-direction: column;
     align-items: center;
     height: 150px;
+  }
+`;
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 `;
 const StyledMessage = styled.p`
@@ -79,6 +112,7 @@ const StyledMessage = styled.p`
   padding: 14px 18px;
   color: #fff;
   border-radius: 35px 35px 0 35px;
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 const StyledCol = styled(Col)`
   display: flex;
@@ -99,13 +133,13 @@ const CloseButton = styled.button`
   font-size: 14px;
   border-radius: 5px;
   padding: 2px 5px;
-  @media (max-width: 1200px) {
-  }
+ 
 `;
 const StyledContMessage = styled.div`
   position: absolute;
   top: -70px;
   right: 120px;
+  animation: ${fadeIn} 0.5s ease-in-out;
   @media (max-width: 1200px) {
     position: relative;
     right: 0;
