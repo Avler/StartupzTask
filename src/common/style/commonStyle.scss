@@ -104,16 +104,22 @@
 
 .list-item {
   color: #46b8c8;
-
+  cursor: pointer;
   font-size: 20px;
   font-weight: 400;
   line-height: 35px;
+
   @media (max-width: 1000px) {
     text-align: center;
   }
 }
+.list-item:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 .logos {
   width: 23px;
+  cursor: pointer;
 }
 .col-sizer {
   width: 150px;

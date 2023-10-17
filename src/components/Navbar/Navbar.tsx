@@ -7,8 +7,9 @@ import styled from 'styled-components';
 type Props = {
   onContactClick: () => void;
   onWeAreHiringClick: () => void;
+  onStartupsClick: () => void;
 };
-const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick }) => {
+const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick, onStartupsClick }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
@@ -25,7 +26,7 @@ const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick }) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/startups">Startups</Dropdown.Item>
+                <Dropdown.Item onClick={onStartupsClick}>Startups</Dropdown.Item>
                 <Dropdown.Item onClick={onContactClick}>Contact</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={onWeAreHiringClick}>Work with us!</Dropdown.Item>
@@ -33,7 +34,7 @@ const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick }) => {
             </Dropdown>
 
             <StyledList className="d-none d-md-flex">
-              <StyledListItem>Startups</StyledListItem>
+              <StyledListItem onClick={onStartupsClick}>Startups</StyledListItem>
               <StyledListItem onClick={onContactClick}>Contact</StyledListItem>{' '}
               <CustomButton
                 bgColor="#fff"

@@ -17,7 +17,7 @@ const Footer = () => {
               © 2020 Startupz. <br /> All rights reserved.{' '}
             </p>
           </StyledCol>
-          <Col md={2} xs={4}>
+          <Col md={2} xs={9}>
             <h3 className="link-title">Companies</h3>
             <StyledList>
               <li className="list-item">Tolq</li>
@@ -26,7 +26,7 @@ const Footer = () => {
               <li className="list-item">Feedback Labs</li>
             </StyledList>
           </Col>
-          <Col xs={5}>
+          <Col sm={5} xs={9}>
             {' '}
             <h3 className="link-title">Contact</h3>
             <p className="gray-text">
@@ -34,7 +34,7 @@ const Footer = () => {
             </p>
             <p className="list-item">Send us an email</p>
           </Col>
-          <Col xs={2}>
+          <Col sm={2} xs={5}>
             <h3 className="link-title">Follow us</h3>
             <StyledDiv>
               <Image src={twitter} alt="twitter" className="logos"></Image>
@@ -91,5 +91,6 @@ const StyledDiv = styled.div`
   @media (max-width: 1000px) {
     flex-direction: row;
     padding-bottom: 20px;
+    justify-content: center;
   }
 `;

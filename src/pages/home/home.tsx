@@ -6,8 +6,8 @@ import bulb from '../../assets/bulb.svg';
 import WeAreHiring from './components/WeAreHiring/WeAreHiring';
 import Contact from './components/Contact/Contact';
 import OurWorks from './components/OurWorks/OurWorks';
-
-import React, { useRef } from 'react';
+import useSmoothScroll from '../../hooks/useSmoothScroll';
+import { useRef } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
@@ -15,14 +15,15 @@ const home = () => {
   const ourWorksRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
   const weAreHiringRef = useRef<HTMLDivElement | null>(null);
-  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const heroSectionRef = useRef<HTMLDivElement | null>(null);
+  const { scrollToRef } = useSmoothScroll();
   return (
     <>
-      <Navbar onContactClick={() => scrollToRef(contactRef)} onWeAreHiringClick={() => scrollToRef(weAreHiringRef)} />
+      <Navbar
+        onContactClick={() => scrollToRef(contactRef)}
+        onWeAreHiringClick={() => scrollToRef(weAreHiringRef)}
+        onStartupsClick={() => scrollToRef(heroSectionRef)}
+      />
       <HeroSection onSeeOurWorksClick={() => scrollToRef(ourWorksRef)} />
       <DescriptionSection
         title="Who we are"

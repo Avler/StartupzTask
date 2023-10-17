@@ -50,6 +50,12 @@ const StyledCard = styled.div`
   background: #fff;
   box-shadow: 0px 8px 35px 0px rgba(187, 169, 142, 0.15);
   padding: 20px;
+  transition: transform 0.3s; // Smooth transition for scaling
+
+  &:hover {
+    transform: scale(1.05); // Scales the card by 5% on hover
+  }
+
   @media (max-width: 730px) {
     width: 350px;
   }

@@ -1,6 +1,6 @@
 import { Col, Container, Row, Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import '../../../common/style/commonStyle.scss'
+import '../../../common/style/commonStyle.scss';
 
 type Item = {
   title: string;
@@ -77,7 +77,7 @@ const StyledRowTitle = styled(Row)`
   justify-content: center;
   @media (min-width: 1200px) {
     align-items: flex-start;
-    padding-left: 100px;
+    padding-left: 75px;
   }
 `;
 const StyledRow = styled(Row)`
@@ -87,9 +87,9 @@ const StyledRow = styled(Row)`
     flex-direction: row;
   }
 `;
-const StyledItemDescriptionCont = styled.p`
+const StyledItemDescriptionCont = styled.div`
   width: 600px;
-  
+
   @media (max-width: 578px) {
     width: 300px;
   }

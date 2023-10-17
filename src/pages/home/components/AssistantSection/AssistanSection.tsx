@@ -1,4 +1,4 @@
-import { useState , useEffect , useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import AssistantImage from '../../../../assets/assistent.webp';
 import ThumbIcon from '../../../../assets/thumb.webp';
@@ -11,26 +11,26 @@ const AssistanSection = () => {
 
   const sectionRef = useRef(null);
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting) {
-        setMessageVisible(true);
-      }
-    },
-    { threshold: 0.1 } // 10% visibility triggers the callback
-  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          setMessageVisible(true);
+        }
+      },
+      { threshold: 0.1 }, // 10% visibility triggers the callback
+    );
 
-  if (sectionRef.current) {
-    observer.observe(sectionRef.current);
-  }
-
-  return () => {
     if (sectionRef.current) {
-      observer.unobserve(sectionRef.current);
+      observer.observe(sectionRef.current);
     }
-  };
-}, []);
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
     <PageWrapper ref={sectionRef}>
@@ -46,7 +46,7 @@ useEffect(() => {
             <Image src={ThumbIconRight} alt="Thumb Icon" />
           </StyledCol>
         </StyledRow>
-        <Row >
+        <Row>
           <AssistantBox xs="auto">
             {isMessageVisible && (
               <StyledContMessage>
@@ -90,7 +90,7 @@ const AssistantBox = styled(Col)`
   top: 120px;
   height: 250px;
   right: 100px;
-  
+
   @media (max-width: 1200px) {
     position: static;
     flex-direction: column;
@@ -133,7 +133,6 @@ const CloseButton = styled.button`
   font-size: 14px;
   border-radius: 5px;
   padding: 2px 5px;
- 
 `;
 const StyledContMessage = styled.div`
   position: absolute;
