@@ -4,7 +4,7 @@ import { Form as BSForm } from 'react-bootstrap';
 import styled from 'styled-components';
 import * as yup from 'yup';
 import CustomButton from '../../common/components/CustomButton/CustomButton';
-import '../../common/style/commonStyle.scss'
+import '../../common/style/commonStyle.scss';
 
 interface FormFields {
   name: string;
@@ -51,7 +51,7 @@ const ContactForm: React.FC<Props> = ({ onSuccessfulSubmit }) => {
               {({ input, meta }) => (
                 <div>
                   <StyledInput {...input} placeholder="Name*" />
-                  {meta.error && meta.touched && <span className='error-msg'>{meta.error}</span>}
+                  {meta.error && meta.touched && <span className="error-msg">{meta.error}</span>}
                 </div>
               )}
             </Field>
@@ -59,7 +59,7 @@ const ContactForm: React.FC<Props> = ({ onSuccessfulSubmit }) => {
               {({ input, meta }) => (
                 <div>
                   <StyledInput {...input} placeholder="Email*" />
-                  {meta.error && meta.touched && <span className='error-msg'>{meta.error}</span>}
+                  {meta.error && meta.touched && <span className="error-msg">{meta.error}</span>}
                 </div>
               )}
             </Field>
@@ -67,7 +67,7 @@ const ContactForm: React.FC<Props> = ({ onSuccessfulSubmit }) => {
               {({ input, meta }) => (
                 <StyledTextAreaCont>
                   <StyledTextArea as="textarea" {...input} placeholder="Message*" />
-                  {meta.error && meta.touched && <span className='error-msg'>{meta.error}</span>}
+                  {meta.error && meta.touched && <span className="error-msg">{meta.error}</span>}
                 </StyledTextAreaCont>
               )}
             </Field>

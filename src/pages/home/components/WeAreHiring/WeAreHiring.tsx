@@ -36,6 +36,9 @@ const PageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  @media (max-width: 500px) {
+    padding: 65px 0px;
+  }
 `;
 const StyledText = styled.p`
   width: 540px;

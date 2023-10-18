@@ -45,6 +45,7 @@ const PageWrapper = styled.div`
   }
   @media (max-width: 400px) {
     text-align: center;
+    padding: 60px 0px;
   }
 `;
 

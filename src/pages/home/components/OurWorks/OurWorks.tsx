@@ -66,6 +66,9 @@ const OurWorks = () => {
 const PageWrapper = styled.div`
   padding: 140px 0px;
   max-width: 1440px;
+  @media (max-width: 500px) {
+    padding: 65px 0px;
+  }
 `;
 const StyledTitle = styled.h2`
   text-align: center;
