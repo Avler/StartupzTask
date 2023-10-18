@@ -1,15 +1,16 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import SectionCard from '../../../../common/components/SectionCard/SectionCard';
-import card1img from '../../../../assets/card1.webp';
-import card2img from '../../../../assets/card2.webp';
-import card3img from '../../../../assets/card3.webp';
-import card4img from '../../../../assets/card4.webp';
-import thumb from '../../../../assets/thumb.webp';
-import thumbRight from '../../../../assets/thumbRight.webp';
-import '../../../../common/style/commonStyle.scss';
+import SectionCard from '../SectionCard/SectionCard';
+import card1img from '../../assets/card1.webp';
+import card2img from '../../assets/card2.webp';
+import card3img from '../../assets/card3.webp';
+import card4img from '../../assets/card4.webp';
+import thumb from '../../assets/thumb.webp';
+import thumbRight from '../../assets/thumbRight.webp';
+import '../../style/commonStyle.scss';
 
 const OurWorks = () => {
+  
   return (
     <Container>
       <PageWrapper>
@@ -63,6 +64,8 @@ const OurWorks = () => {
   );
 };
 
+export default OurWorks;
+
 const PageWrapper = styled.div`
   padding: 140px 0px;
   max-width: 1440px;
@@ -99,4 +102,3 @@ const StyledImage = styled(Image)`
     display: none;
   }
 `;
-export default OurWorks;

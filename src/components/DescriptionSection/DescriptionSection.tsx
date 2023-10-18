@@ -1,6 +1,6 @@
 import { Col, Container, Row, Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import '../../../common/style/commonStyle.scss';
+import '../../style/commonStyle.scss';
 
 type Item = {
   title: string;
@@ -16,6 +16,7 @@ type DescriptionSectionProps = {
 };
 
 const DescriptionSection: React.FC<DescriptionSectionProps> = ({ title, description, imageUrl, items }) => {
+  
   return (
     <ContainerBox fluid>
       <PageWrapper>
@@ -41,6 +42,8 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ title, descript
     </ContainerBox>
   );
 };
+
+export default DescriptionSection;
 
 const ContainerBox = styled(Container)`
   background: #fbfafa;
@@ -110,4 +113,3 @@ const PageWrapper = styled.div`
   gap: 54px;
   padding-left: 30px;
 `;
-export default DescriptionSection;

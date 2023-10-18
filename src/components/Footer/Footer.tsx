@@ -1,12 +1,13 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import '../../common/style/commonStyle.scss';
 import logo from '../../assets/logo.svg';
 import twitter from '../../assets/twitter.svg';
-import linkedin from '../../assets/likedin.svg';
+import linkedin from '../../assets/linkedin.svg';
 import instagram from '../../assets/instagram.svg';
+import '../../style/commonStyle.scss';
 
 const Footer = () => {
+  
   return (
     <StyledContainer fluid>
       <PageWrapper>

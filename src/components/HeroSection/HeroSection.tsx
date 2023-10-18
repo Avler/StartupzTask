@@ -1,12 +1,15 @@
 import { Col, Container, Row, Image } from 'react-bootstrap';
-import CustomButton from '../../../../common/components/CustomButton/CustomButton';
+import CustomButton from '../CustomButton/CustomButton';
 import styled from 'styled-components';
-import '../../../../common/style/commonStyle.scss';
-import HeroImg from '../../../../assets/heroImg.webp';
+import HeroImg from '../../assets/heroImg.webp';
+import '../../style/commonStyle.scss';
+
 type Props = {
   onSeeOurWorksClick: () => void;
 };
+
 const HeroSection = ({ onSeeOurWorksClick }: Props) => {
+  
   return (
     <PageWrapper>
       <ContainerBox fluid>

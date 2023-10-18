@@ -1,11 +1,12 @@
 import { Container, Image } from 'react-bootstrap';
 import styled from 'styled-components';
-import CustomButton from '../../../../common/components/CustomButton/CustomButton';
-import artLeft from '../../../../assets/artLeft.webp';
-import artRight from '../../../../assets/artRight.webp';
-import '../../../../common/style/commonStyle.scss';
+import CustomButton from '../CustomButton/CustomButton';
+import artLeft from '../../assets/artLeft.webp';
+import artRight from '../../assets/artRight.webp';
+import '../../style/commonStyle.scss';
 
 const WeAreHiring = () => {
+  
   return (
     <StyledContainer fluid>
       <StyledImageLeft src={artLeft} alt="art" />
@@ -22,6 +23,8 @@ const WeAreHiring = () => {
     </StyledContainer>
   );
 };
+
+export default WeAreHiring;
 
 const StyledContainer = styled(Container)`
   background: #fbfafa;
@@ -63,4 +66,3 @@ const StyledImageRight = styled(Image)`
     display: none;
   }
 `;
-export default WeAreHiring;

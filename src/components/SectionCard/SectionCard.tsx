@@ -11,6 +11,7 @@ interface Props {
 }
 
 const SectionCard: React.FC<Props> = ({ title, titleColor, description, imgSrc }) => {
+  
   return (
     <StyledCard>
       <StyledContainer fluid>
@@ -41,6 +42,8 @@ const SectionCard: React.FC<Props> = ({ title, titleColor, description, imgSrc }
     </StyledCard>
   );
 };
+
+export default SectionCard;
 
 const StyledCard = styled.div`
   width: 588px;
@@ -87,4 +90,3 @@ const StyledTitle = styled.h3`
 const StyledDescription = styled.p`
   max-width: 360px;
 `;
-export default SectionCard;

@@ -2,9 +2,9 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 import { Form as BSForm } from 'react-bootstrap';
 import styled from 'styled-components';
+import CustomButton from '../CustomButton/CustomButton';
 import * as yup from 'yup';
-import CustomButton from '../../common/components/CustomButton/CustomButton';
-import '../../common/style/commonStyle.scss';
+import '../../style/commonStyle.scss';
 
 interface FormFields {
   name: string;
@@ -22,6 +22,7 @@ const schema: yup.ObjectSchema<FormFields> = yup.object().shape({
 });
 
 const ContactForm: React.FC<Props> = ({ onSuccessfulSubmit }) => {
+  
   const onSubmit = (values: FormFields) => {
     console.log(values);
     onSuccessfulSubmit();
@@ -81,6 +82,8 @@ const ContactForm: React.FC<Props> = ({ onSuccessfulSubmit }) => {
   );
 };
 
+export default ContactForm;
+
 const StyledTextAreaCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -132,5 +135,3 @@ const StyledTextArea = styled(BSForm.Control)`
     width: 300px;
   }
 `;
-
-export default ContactForm;

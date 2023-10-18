@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Dropdown, Image } from 'react-bootstrap';
-import CustomButton from '../../common/components/CustomButton/CustomButton';
 import { FiMenu } from 'react-icons/fi';
+import CustomButton from '../CustomButton/CustomButton';
 import logo from '../../assets/logo.svg';
 import styled from 'styled-components';
+
 type Props = {
   onContactClick: () => void;
   onWeAreHiringClick: () => void;
   onStartupsClick: () => void;
 };
 const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick, onStartupsClick }) => {
+  
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
@@ -31,7 +33,6 @@ const Navbar: React.FC<Props> = ({ onContactClick, onWeAreHiringClick, onStartup
                 <Dropdown.Item onClick={onWeAreHiringClick}>Work with us!</Dropdown.Item>
               </DropdownStyledMenu>
             </Dropdown>
-
             <StyledList className="d-none d-md-flex">
               <StyledListItem onClick={onStartupsClick}>Startups</StyledListItem>
               <StyledListItem onClick={onContactClick}>Contact</StyledListItem>{' '}

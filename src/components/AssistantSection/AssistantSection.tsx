@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import AssistantImage from '../../../../assets/assistent.webp';
-import ThumbIcon from '../../../../assets/thumb.webp';
-import ThumbIconRight from '../../../../assets/thumbRight.webp';
 import styled, { keyframes } from 'styled-components';
-import '../../../../common/style/commonStyle.scss';
+import AssistantImage from '../../assets/assistant.webp';
+import ThumbIcon from '../../assets/thumb.webp';
+import ThumbIconRight from '../../assets/thumbRight.webp';
+import '../../style/commonStyle.scss';
 
-const AssistanSection = () => {
+const AssistantSection = () => {
+  
   const [isMessageVisible, setMessageVisible] = useState(false);
-
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -69,6 +69,8 @@ const AssistanSection = () => {
     </PageWrapper>
   );
 };
+
+export default AssistantSection;
 
 const PageWrapper = styled.div`
   padding: 140px 0px;
@@ -146,4 +148,3 @@ const StyledContMessage = styled.div`
     margin-top: 30px;
   }
 `;
-export default AssistanSection;

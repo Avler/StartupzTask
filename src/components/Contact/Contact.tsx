@@ -1,17 +1,18 @@
 import { Container, Image } from 'react-bootstrap';
 import { useState } from 'react';
 import styled from 'styled-components';
-import rocket from '../../../../assets/rocket.svg';
-import ContactForm from '../../../../components/ContactForm/ContactForm';
-import '../../../../common/style/commonStyle.scss';
+import rocket from '../../assets/rocket.svg';
+import ContactForm from '../ContactForm/ContactForm';
+import '../../style/commonStyle.scss';
 
 const Contact = () => {
+  
   const [isRocketFlying, setRocketFlying] = useState(false);
   setTimeout(() => setRocketFlying(false), 5000);
+
   return (
     <StyledContainer fluid>
       <StyledImage className={isRocketFlying ? 'flying' : ''} src={rocket} alt="rocket" />
-
       <PageWrapper>
         <StyledDiv>
           <StyledTitle>
